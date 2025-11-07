@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopEase - Your Online Shopping App</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    
+    header {
+      background: #ff4d6d;
+      color: white;
+      padding: 20px 10%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    nav a {
+      margin: 0 15px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffe8ef;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 10%;
+      background: linear-gradient(to right, #ffe4ec, #fff);
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-text h2 {
+      font-size: 42px;
+      color: #ff3366;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .btn-primary {
+      background: #ff3366;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: #ff5c85;
+    }
+
+    .hero img {
+      width: 400px;
+      border-radius: 15px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .products {
+      padding: 60px 10%;
+      text-align: center;
+    }
+
+    .products h2 {
+      font-size: 32px;
+      color: #ff3366;
+      margin-bottom: 40px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .product {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-8px);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .product h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .product p {
+      font-size: 15px;
+      color: #777;
+      margin-bottom: 15px;
+    }
+
+    .product button {
+      background: #ff3366;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .product button:hover {
+      background: #ff5c85;
+    }
+
+    .testimonials {
+      background: #fff5f8;
+      padding: 60px 10%;
+      text-align: center;
+    }
+
+    .testimonials h2 {
+      font-size: 32px;
+      color: #ff3366;
+      margin-bottom: 40px;
+    }
+
+    .testimonial-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .testimonial {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      width: 300px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .testimonial p {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .testimonial h4 {
+      color: #ff3366;
+      font-weight: 600;
+    }
+
+    footer {
+      background: #ff4d6d;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 15px;
+    }
+
+    footer a {
+      color: #ffe8ef;
+      font-weight: 500;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ShopEase</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Deals</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Shop Smart. Live Better.</h2>
+      <p>Discover thousands of products at the best prices. From fashion to electronics — ShopEase brings it all to your fingertips!</p>
+      <a href="#" class="btn-primary">Start Shopping</a>
+    </div>
+    <img src="https://images.pexels.com/photos/1050244/pexels-photo-1050244.jpeg?cs=srgb&dl=pexels-olly-1050244.jpg&fm=jpg" alt="Shopping">
+  </section>
+
+  <section class="products">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://media.gq.com/photos/67d3325b88e7ab754d84e65b/master/w_1920,c_limit/2501-GQR-January-HikingBoots-Lede-1323.jpg" alt="Jeans">
+        <h3>Classic Blue Jeans</h3>
+        <p>Comfortable, stylish, and durable denim.</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" alt="Headphones">
+        <h3>Wireless Headphones</h3>
+        <p>High-quality sound with noise cancellation.</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/2-67cef69cd806e.jpg" alt="Smartphone">
+        <h3>Smartphone Pro</h3>
+        <p>Capture, connect, and create with ease.</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <p>"ShopEase has changed the way I shop online. Fast delivery and great deals!"</p>
+        <h4>– ROSHAN.</h4>
+      </div>
+      <div class="testimonial">
+        <p>"The app is super easy to use. Love the variety of products available."</p>
+        <h4>– AYUSH MAURYA.</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Excellent customer service and quality products every time."</p>
+        <h4>– NARENDRA MODI</h4>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 ShopEase Inc. | <a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+  </footer>
+
+</body>
+</html>
